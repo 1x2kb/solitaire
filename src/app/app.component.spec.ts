@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { CardComponent } from 'src/app/components/card/card.component';
+import { CardColorPipe } from 'src/app/pipes/card-color/card-color.pipe';
 import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
 import { DeckService } from 'src/app/services/deck/deck.service';
 import { AppComponent } from './app.component';
@@ -7,7 +8,12 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent, CardComponent, FaceNumberPipe],
+      declarations: [
+        AppComponent,
+        CardComponent,
+        FaceNumberPipe,
+        CardColorPipe,
+      ],
       providers: [DeckService],
     }).compileComponents();
   });

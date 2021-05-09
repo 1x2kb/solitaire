@@ -16,7 +16,7 @@ describe('FaceNumberPipe', () => {
     const expected = null;
     const actual = pipe.transform(undefined);
 
-    expect(expected).toBe(actual);
+    expect(actual).toBe(expected);
   });
 
   describe('it handles face cards', () => {
@@ -27,7 +27,7 @@ describe('FaceNumberPipe', () => {
       const expected = 'A';
       const actual = pipe.transform(cardNumber);
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
 
     it('converts jack into jack card.', () => {
@@ -35,7 +35,7 @@ describe('FaceNumberPipe', () => {
       const expected = 'J';
       const actual = pipe.transform(cardNumber);
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
 
     it('converts queen into queen card', () => {
@@ -43,7 +43,7 @@ describe('FaceNumberPipe', () => {
       const expected = 'Q';
       const actual = pipe.transform(cardNumber);
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
 
     it('converts king into king card', () => {
@@ -51,7 +51,7 @@ describe('FaceNumberPipe', () => {
       const expected = 'K';
       const actual = pipe.transform(cardNumber);
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
   });
 });

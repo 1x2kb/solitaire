@@ -1,7 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Card } from 'src/app/models/card/card.class';
 import { Suit } from 'src/app/models/suit.enum';
+import { CardColorPipe } from 'src/app/pipes/card-color/card-color.pipe';
 import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
 import { CardComponent } from './card.component';
 
@@ -11,7 +12,7 @@ describe('CardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CardComponent, FaceNumberPipe],
+      declarations: [CardComponent, FaceNumberPipe, CardColorPipe],
     }).compileComponents();
   });
 

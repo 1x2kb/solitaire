@@ -16,21 +16,21 @@ describe('Card', () => {
       const expected = cardNumber;
       const actual: CardNumber = card.cardNumber;
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
 
     it('should assign suit', () => {
       const expected = suit;
       const actual = card.suit;
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
 
     it('should default assign face direction down', () => {
       const expected = FaceDirection.down;
       const actual = card.faceDirection;
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
 
     it('should assign face direction up', () => {
@@ -39,7 +39,7 @@ describe('Card', () => {
       const expected = FaceDirection.up;
       const actual = card.faceDirection;
 
-      expect(expected).toBe(actual);
+      expect(actual).toBe(expected);
     });
   });
 

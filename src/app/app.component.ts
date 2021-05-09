@@ -12,12 +12,6 @@ export class AppComponent {
   Suit = Suit;
   title = 'solitaire';
 
-  // testCard = new Card(7, Suit.diamonds);
-  unshuffled: Deck;
-  shuffled: Deck;
-
-  constructor(deckService: DeckService) {
-    this.unshuffled = deckService.createUnshuffledDeck();
-    this.shuffled = deckService.createShuffledDeck();
-  }
+  testCard1 = new Card(7, Suit.clubs);
+  testCard2 = new Card(7, Suit.hearts);
 }
