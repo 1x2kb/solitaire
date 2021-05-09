@@ -41,7 +41,7 @@ jobs:
           npm run lint
 
   build:
-    name: Build App Dev
+    name: Build App Prod
     runs-on: ubuntu-latest
     steps:
       - name: Checking out repository.
