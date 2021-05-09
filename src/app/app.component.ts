@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Card, Deck } from 'src/app/models/card.class';
+import { Card, Deck } from 'src/app/models/card/card.class';
 import { Suit } from 'src/app/models/suit.enum';
 import { DeckService } from 'src/app/services/deck/deck.service';
 

@@ -1,4 +1,4 @@
-import { Card, CardNumber } from 'src/app/models/card.class';
+import { Card, CardNumber } from 'src/app/models/card/card.class';
 import { Suit } from 'src/app/models/suit.enum';
 import { FaceNumberPipe } from './face-number.pipe';
 
@@ -10,6 +10,13 @@ describe('FaceNumberPipe', () => {
 
   it('create an instance', () => {
     expect(pipe).toBeTruthy();
+  });
+
+  it('returns null if no number is given', () => {
+    const expected = null;
+    const actual = pipe.transform(undefined);
+
+    expect(expected).toBe(actual);
   });
 
   describe('it handles face cards', () => {

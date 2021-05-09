@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Card, CardNumber, Deck } from 'src/app/models/card.class';
+import { Card, CardNumber, Deck } from 'src/app/models/card/card.class';
 import { Suit } from 'src/app/models/suit.enum';
 
 @Injectable({

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Card, CardNumber } from 'src/app/models/card.class';
+import { Card, CardNumber } from 'src/app/models/card/card.class';
 
 @Pipe({
   name: 'faceNumber',

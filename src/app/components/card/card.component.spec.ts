@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Card } from 'src/app/models/card.class';
+import { Card } from 'src/app/models/card/card.class';
 import { Suit } from 'src/app/models/suit.enum';
 import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
 import { CardComponent } from './card.component';
