@@ -3,14 +3,11 @@ import { CardComponent } from 'src/app/components/card/card.component';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        CardComponent
-      ],
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [AppComponent, CardComponent],
     }).compileComponents();
-  }));
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
