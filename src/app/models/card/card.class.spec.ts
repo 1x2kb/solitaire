@@ -44,8 +44,6 @@ describe('Card', () => {
   });
 
   describe('should contain correct color for suit', () => {
-    let card: Card;
-
     describe('color is black', () => {
 
       it('should show spades as black', () => {
