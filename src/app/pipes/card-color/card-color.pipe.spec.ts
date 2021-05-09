@@ -12,6 +12,13 @@ describe('CardColorPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
+  it('returns null when given undefined', () => {
+    const expected = null;
+    const actual = pipe.transform(undefined);
+
+    expect(actual).toBe(null);
+  });
+
   describe('it returns the correct color', () => {
     let card: Card;
 

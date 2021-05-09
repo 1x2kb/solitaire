@@ -85,6 +85,15 @@ describe('DeckService', () => {
       }
     });
   });
+
+  describe('shuffles a deck', () => {
+    it('should produce a shuffled deck', () => {
+      const unshuffled = service.createUnshuffledDeck();
+      const shuffled = service.createShuffledDeck();
+
+      expect(shuffled).not.toEqual(unshuffled);
+    });
+  });
 });
 
 function containsCard(deck: Deck, card: Card): boolean {
