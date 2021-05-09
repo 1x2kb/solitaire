@@ -6,10 +6,27 @@ import { Suit } from 'src/app/models/suit.enum';
   providedIn: 'root',
 })
 export class DeckService {
-  private static readonly suits: Suit[] = [Suit.hearts, Suit.clubs, Suit.diamonds, Suit.spades];
-  private static readonly cardNumbers: CardNumber[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-
-  constructor() {}
+  private static readonly suits: Suit[] = [
+    Suit.hearts,
+    Suit.clubs,
+    Suit.diamonds,
+    Suit.spades,
+  ];
+  private static readonly cardNumbers: CardNumber[] = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+  ];
 
   createUnshuffledDeck(): Deck {
     const deck: Deck = [];
@@ -18,6 +35,25 @@ export class DeckService {
       for (const cardNumberIter of DeckService.cardNumbers) {
         deck.push(new Card(cardNumberIter, suitIter));
       }
+    }
+
+    return deck;
+  }
+
+  createShuffledDeck(): Deck {
+    return this.shuffleCards(this.createUnshuffledDeck());
+  }
+
+  shuffleCards(deck: Deck, shuffleTimes = 5): Deck {
+    for (let i = 0; i < shuffleTimes; ++i) {
+      const newDeck: Deck = [];
+
+      for (let j = deck.length; j > 0; j = deck.length) {
+        const randomNumber = Math.floor(Math.random() * (deck.length - 1));
+        newDeck.push(deck.splice(randomNumber, 1)[0]);
+      }
+
+      deck = newDeck;
     }
 
     return deck;
