@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { Card } from 'src/app/models/card.class';
 import { Suit } from 'src/app/models/suit.enum';
-
+import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
 import { CardComponent } from './card.component';
 
 describe('CardComponent', () => {
@@ -10,7 +11,7 @@ describe('CardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardComponent ]
+      declarations: [ CardComponent, FaceNumberPipe ]
     })
     .compileComponents();
   }));
@@ -22,8 +23,8 @@ describe('CardComponent', () => {
   });
 
   beforeEach(() => {
-    component.number = 7;
-    component.suit = Suit.hearts;
+    const card = new Card(7, Suit.hearts);
+    component.card = card;
     fixture.detectChanges();
   });
 

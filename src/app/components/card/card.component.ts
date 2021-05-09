@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Suit } from 'src/app/models/suit.enum';
+import { Card } from 'src/app/models/card.class';
 
 @Component({
   selector: 'app-card',
@@ -10,10 +11,7 @@ export class CardComponent implements OnInit {
   Suit = Suit;
 
   @Input()
-  number: number;
-
-  @Input()
-  suit: Suit;
+  card: Card;
 
   constructor() {}
 

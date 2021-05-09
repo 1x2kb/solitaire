@@ -1,6 +1,11 @@
 <div class="card-container">
-  <div class="card-header">
-    <span class="card-number">{{ number }}</span>
-    <span class="card-suit">{{ suit }}</span>
+  <div *ngIf="card" class="card-header" [ngClass]="">
+    <span class="card-number">{{ card.cardNumber | faceNumber }}</span>
+    <span class="card-suit">{{ card.suit }}</span>
+  </div>
+
+  <div *ngIf="card" class="card-footer">
+    <span class="card-number">{{ card.cardNumber | faceNumber }}</span>
+    <span class="card-suit">{{ card.suit }}</span>
   </div>
 </div>
