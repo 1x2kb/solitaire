@@ -1,0 +1,33 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  width: 6rem;
+  height: 9rem;
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+
+.card-header {
+  width: 100%;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.card-footer {
+  width: 100%;
+  align-self: flex-end;
+  text-align: end;
+  margin-top: auto;
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
