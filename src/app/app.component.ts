@@ -11,7 +11,4 @@ import { DeckService } from 'src/app/services/deck/deck.service';
 export class AppComponent {
   Suit = Suit;
   title = 'solitaire';
-
-  testCard1 = new Card(7, Suit.clubs);
-  testCard2 = new Card(7, Suit.hearts);
 }

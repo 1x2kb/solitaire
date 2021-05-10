@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { BoardComponent } from 'src/app/components/board/board.component';
 import { CardComponent } from 'src/app/components/card/card.component';
 import { CardColorPipe } from 'src/app/pipes/card-color/card-color.pipe';
 import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
@@ -13,6 +14,7 @@ describe('AppComponent', () => {
         CardComponent,
         FaceNumberPipe,
         CardColorPipe,
+        BoardComponent
       ],
       providers: [DeckService],
     }).compileComponents();
