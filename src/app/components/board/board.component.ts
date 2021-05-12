@@ -18,19 +18,30 @@ export class BoardComponent implements OnInit {
   constructor(private deckService: DeckService) {
     this.deck = deckService.createShuffledDeck();
 
-    for (let i = 0; i < BoardComponent.cardColumns; ++i) {
-      this.cardColumns.push(new CardColumn());
-    }
-
     const dealAmount = 27;
+    const dealDeck: Deck = this.deck.slice(
+      this.deck.length - dealAmount - 1,
+      this.deck.length
+    );
+    this.deck.length -= dealAmount;
 
-    for (let i = 0; i < dealAmount; ++i) {
-      // const pile = dealAmount / BoardComponent.cardColumns;
-      const test1 = i % BoardComponent.cardColumns;
-      const test2 = BoardComponent.cardColumns / i;
+    const piles = [
+      [0],
+      [1, 7],
+      [2, 8, 13],
+      [3, 9, 14, 18],
+      [4, 10, 15, 19, 22],
+      [5, 11, 16, 20, 23, 25],
+      [6, 12, 17, 21, 24, 26, 27],
+    ];
 
+    for (let i = 0; i < BoardComponent.cardColumns - 1; ++i) {
+      const pile = new CardColumn();
+      const cards: Card[] = piles[i].map((indexIter) => dealDeck[indexIter]);
 
-      debugger;
+      cards.forEach((cardIter) => pile.addCard(cardIter));
+
+      this.cardColumns.push(pile);
     }
   }
 
