@@ -13,19 +13,7 @@ export class DeckService {
     Suit.spades,
   ];
   private static readonly cardNumbers: CardNumber[] = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
   ];
 
   createUnshuffledDeck(): Deck {
@@ -49,7 +37,7 @@ export class DeckService {
       const newDeck: Deck = [];
 
       for (let j = deck.length; j > 0; j = deck.length) {
-        const randomNumber = Math.floor(Math.random() * (deck.length));
+        const randomNumber = Math.floor(Math.random() * deck.length);
         newDeck.push(deck.splice(randomNumber, 1)[0]);
       }
 

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CardComponent } from 'src/app/components/card/card.component';
 
 import { CardColumnComponent } from './card-column.component';
 
@@ -8,7 +9,7 @@ describe('CardColumnComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardColumnComponent ]
+      declarations: [ CardColumnComponent, CardComponent]
     })
     .compileComponents();
   }));
