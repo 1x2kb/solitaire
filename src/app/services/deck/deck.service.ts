@@ -49,7 +49,7 @@ export class DeckService {
       const newDeck: Deck = [];
 
       for (let j = deck.length; j > 0; j = deck.length) {
-        const randomNumber = Math.floor(Math.random() * (deck.length - 1));
+        const randomNumber = Math.floor(Math.random() * (deck.length));
         newDeck.push(deck.splice(randomNumber, 1)[0]);
       }
 

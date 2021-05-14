@@ -35,7 +35,7 @@ export class BoardComponent implements OnInit {
       [6, 12, 17, 21, 24, 26, 27],
     ];
 
-    for (let i = 0; i < BoardComponent.cardColumns - 1; ++i) {
+    for (let i = 0; i < BoardComponent.cardColumns; ++i) {
       const pile = new CardColumn();
       const cards: Card[] = piles[i].map((indexIter) => dealDeck[indexIter]);
 
