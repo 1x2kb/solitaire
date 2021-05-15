@@ -1,1 +1,4 @@
-<app-card *ngFor="let card of cardColumn.cards" [card]="card"></app-card>
+<ng-container *ngIf="cardColumn">
+  <app-card *ngFor="let card of cardColumn.cards" [card]="card"></app-card>
+</ng-container>
+

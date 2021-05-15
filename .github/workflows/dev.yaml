@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "12"
+      - name: Install modules
+        run: npm install
       - name: Test
-        run: |
-          npm install
-          npm run test:coverage
+        run: npm run test:coverage
       - name: Archive coverage
         uses: actions/upload-artifact@v2
         with:
@@ -37,10 +37,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "12"
+      - name: Install modules
+        run: npm install
       - name: Lint
-        run: |
-          npm install
-          npm run lint
+        run: npm run lint
 
   build:
     name: Build App Dev
@@ -52,10 +52,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "12"
+      - name: Install modules
+        run: npm install
       - name: Build
-        run: |
-          npm install
-          npm run build
+        run: npm run build
       - name: Archive build artifacts
         uses: actions/upload-artifact@v2
         with:
