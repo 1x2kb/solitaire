@@ -3,6 +3,7 @@ import { CardColumnComponent } from 'src/app/components/card-column/card-column.
 import { CardComponent } from 'src/app/components/card/card.component';
 import { CardColorPipe } from 'src/app/pipes/card-color/card-color.pipe';
 import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
+import { CardService } from 'src/app/services/card/card.service';
 import { BoardComponent } from './board.component';
 
 describe('BoardComponent', () => {
@@ -18,6 +19,7 @@ describe('BoardComponent', () => {
         CardColorPipe,
         FaceNumberPipe,
       ],
+      providers: [CardService],
     }).compileComponents();
   });
 

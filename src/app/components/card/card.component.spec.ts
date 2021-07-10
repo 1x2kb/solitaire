@@ -4,6 +4,7 @@ import { Card } from 'src/app/models/card/card.class';
 import { Suit } from 'src/app/models/suit.enum';
 import { CardColorPipe } from 'src/app/pipes/card-color/card-color.pipe';
 import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
+import { CardService } from 'src/app/services/card/card.service';
 import { CardComponent } from './card.component';
 
 describe('CardComponent', () => {
@@ -13,6 +14,7 @@ describe('CardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [CardComponent, FaceNumberPipe, CardColorPipe],
+      providers: [CardService],
     }).compileComponents();
   });
 

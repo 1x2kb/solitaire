@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { CardComponent } from 'src/app/components/card/card.component';
 import { CardColumn } from 'src/app/models/card-column/card-column.class';
@@ -6,7 +6,7 @@ import { Card, Deck } from 'src/app/models/card/card.class';
 import { Suit } from 'src/app/models/suit.enum';
 import { CardColorPipe } from 'src/app/pipes/card-color/card-color.pipe';
 import { FaceNumberPipe } from 'src/app/pipes/face-number/face-number.pipe';
-
+import { CardService } from 'src/app/services/card/card.service';
 import { CardColumnComponent } from './card-column.component';
 
 describe('CardColumnComponent', () => {
@@ -14,7 +14,7 @@ describe('CardColumnComponent', () => {
   let fixture: ComponentFixture<CardColumnComponent>;
   let cards: Deck;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
       declarations: [
         CardColumnComponent,
@@ -22,8 +22,9 @@ describe('CardColumnComponent', () => {
         CardColorPipe,
         FaceNumberPipe,
       ],
+      providers: [CardService],
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CardColumnComponent);
